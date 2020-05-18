@@ -25,6 +25,7 @@
           <element id="file-copy" path="$PROJECT_DIR$/Day1Code/web/WEB-INF/lib/spring-webmvc-4.3.10.RELEASE.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/Day1Code/web/WEB-INF/lib/spring-context-4.3.10.RELEASE.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/Day1Code/web/WEB-INF/lib/spring-expression-4.3.10.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/Day1Code/web/WEB-INF/lib/lombok.jar" />
         </element>
       </element>
     </root>

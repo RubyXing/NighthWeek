@@ -5,7 +5,9 @@ package com.xing.daoImpl;/*
 
 import com.xing.dao.UserDao;
 import com.xing.pojo.User;
+import org.springframework.stereotype.Component;
 
+@Component("userDaoImpl")
 public class UserDaoImpl implements UserDao {
 
     @Override

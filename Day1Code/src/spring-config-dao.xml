@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd"
+       default-autowire="byName"
+>
+
+    <bean id="userDao" class="com.xing.daoImpl.UserDaoImpl"/>
+
+    <bean id="userService" class="com.xing.serviceImpl.UserServiceImpl">
+        <!--        ref:reference 引用已有bean-->
+        <!--        <property name="userDao" ref="userDao"></property>-->
+    </bean>
+    <!--    autowire：
+            byNmae:通过属性名自动寻找
+            byType：通过属性的类型自动寻找该类型的bean，限定条件，只能有一个该类型的bean
+            -->
+
+    <bean id="userServlet" class="com.xing.servlet.UserServlet">
+        <!--        <property name="userService" ref="userService"/>-->
+    </bean>
+
+
+</beans>

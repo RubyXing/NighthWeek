@@ -4,6 +4,9 @@ package com.xing.pojo;/*
  */
 
 
+import lombok.experimental.Accessors;
+
+@Accessors(chain = true)
 public class User {
     private String uname;
     private String upwd;

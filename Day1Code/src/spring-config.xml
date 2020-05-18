@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--    配置实体对象
+        bean:用来创建对象
+        id：bean唯一标识符，同一个配置文件不能出现ID相同的bean
+        class
+        -->
+    <bean id="user" class="com.xing.pojo.User"/>
+<!--    有参构造辅助-->
+    <bean id="user2" class="com.xing.pojo.User">
+        <constructor-arg name="uname" value="zhangsan"/>
+        <constructor-arg name="upwd" value="123456"/>
+    </bean>
+<!--    先生成对象然后通过setter方法赋值
+        scope属性是生成对象时间
+        singletone：单例，只创建一个对象
+        prototype:每次通过ID获取对象，生成新对象
+        request:请求，每请求一次创建一个
+        session：一次会话创建一个
+        -->
+    <bean id="user3" class="com.xing.pojo.User" scope="prototype">
+        <property name="uname" value="lisi"/>
+        <property name="upwd" value="654321"/>
+    </bean>
+
+
+</beans>
